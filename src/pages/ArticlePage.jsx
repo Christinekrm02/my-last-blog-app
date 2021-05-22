@@ -1,13 +1,17 @@
 import React from "react";
 import ArticlesList from "../components/ArticlesList.jsx";
 import articleContent from "./ArticleContent";
+//add error404 page here as well, 
+// in case user searches for page using
+///get-each-article route
+import Error404 from "./Error404.jsx";
 
 export default function ArticlePage({ match }) {
   const slug = match.params.slug;
   //grab article by name from articleContent
   const article = articleContent.find(article => article.name === slug);
-  //Add 404 error
-  if (!article) return <h1>Tutorial not found</h1>;
+  //Add 404 error page
+  if (!article) return <Error404 />;
 
   //access the other articles
   const otherTutorials = articleContent.filter(
