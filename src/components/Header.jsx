@@ -14,7 +14,7 @@ import {
 const navLinks = [
   { title: `Home`, path: `/` },
   { title: `About`, path: `/about` },
-  { title: `Articles`, path: `/articles-list` },
+  { title: `Articles`, path: `/get-all-articles` },
 ];
 const useStyles = makeStyles(theme => ({
   root: {
